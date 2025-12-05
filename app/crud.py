@@ -18,7 +18,10 @@ def create_user(db: Session, user: schemas.UserCreate):
         email=user.email,
         telepon=user.telepon,
         bio=user.bio,
-        lokasi=user.lokasi
+        lokasi=user.lokasi,
+        access_token=None,
+        refresh_token=None,
+        token_expiry=None
     )
     db.add(db_user)
     db.commit()

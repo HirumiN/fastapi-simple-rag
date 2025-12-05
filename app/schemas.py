@@ -15,6 +15,9 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id_user: int
+    access_token: Optional[str] = None
+    refresh_token: Optional[str] = None
+    token_expiry: Optional[datetime] = None
 
     class Config:
         from_attributes = True

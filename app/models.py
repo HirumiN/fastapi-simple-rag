@@ -13,6 +13,9 @@ class User(Base):
     telepon = Column(String)
     bio = Column(Text)
     lokasi = Column(String)
+    access_token = Column(String, nullable=True)
+    refresh_token = Column(String, nullable=True)
+    token_expiry = Column(DateTime, nullable=True)
 
     rags_embeddings = relationship("RAGSEmbedding", back_populates="owner")
     chat_history = relationship("AIChatHistory", back_populates="owner")

@@ -106,6 +106,116 @@
         {% else %}
         <p>No embeddings found. Add some activities above!</p>
         {% endif %}
+
+        <!-- Todos Section -->
+        <h2 class="mb-3 mt-5">Todos</h2>
+        <div class="card mb-4">
+            <div class="card-header">
+                Add New Todo
+            </div>
+            <div class="card-body">
+                <form id="addTodoForm">
+                    <div class="mb-3">
+                        <label for="todo_nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="todo_nama" name="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="todo_tipe" class="form-label">Tipe</label>
+                        <select class="form-control" id="todo_tipe" name="tipe" required>
+                            <option value="academic">Academic</option>
+                            <option value="personal">Personal</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="todo_tenggat" class="form-label">Tenggat (Deadline)</label>
+                        <input type="datetime-local" class="form-control" id="todo_tenggat" name="tenggat">
+                    </div>
+                    <div class="mb-3">
+                        <label for="todo_deskripsi" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" id="todo_deskripsi" name="deskripsi" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Todo</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="todosList">
+            <!-- Todos will be loaded here -->
+        </div>
+
+        <!-- Jadwal Matkul Section -->
+        <h2 class="mb-3 mt-5">Jadwal Matkul</h2>
+        <div class="card mb-4">
+            <div class="card-header">
+                Add New Jadwal Matkul
+            </div>
+            <div class="card-body">
+                <form id="addJadwalForm">
+                    <div class="mb-3">
+                        <label for="jadwal_hari" class="form-label">Hari</label>
+                        <select class="form-control" id="jadwal_hari" name="hari" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jadwal_nama" class="form-label">Nama Matkul</label>
+                        <input type="text" class="form-control" id="jadwal_nama" name="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jadwal_jam_mulai" class="form-label">Jam Mulai</label>
+                        <input type="time" class="form-control" id="jadwal_jam_mulai" name="jam_mulai" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jadwal_jam_selesai" class="form-label">Jam Selesai</label>
+                        <input type="time" class="form-control" id="jadwal_jam_selesai" name="jam_selesai" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jadwal_sks" class="form-label">SKS</label>
+                        <input type="number" class="form-control" id="jadwal_sks" name="sks" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Jadwal Matkul</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="jadwalList">
+            <!-- Jadwal Matkul will be loaded here -->
+        </div>
+
+        <!-- UKM Section -->
+        <h2 class="mb-3 mt-5">UKM</h2>
+        <div class="card mb-4">
+            <div class="card-header">
+                Add New UKM
+            </div>
+            <div class="card-body">
+                <form id="addUkmForm">
+                    <div class="mb-3">
+                        <label for="ukm_nama" class="form-label">Nama UKM</label>
+                        <input type="text" class="form-control" id="ukm_nama" name="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ukm_jabatan" class="form-label">Jabatan</label>
+                        <input type="text" class="form-control" id="ukm_jabatan" name="jabatan" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ukm_deskripsi" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" id="ukm_deskripsi" name="deskripsi" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add UKM</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="ukmList">
+            <!-- UKM will be loaded here -->
+        </div>
     </div>
 
     <!-- Bootstrap 5 JS -->
